@@ -15,7 +15,7 @@ var yadda = new Yadda.Yadda(library);
 // Execute each feature and try to match them against defined library of Yadda-expression
 featureFiles().forEach(executeFeature);
 addDefaultSteps(); // Add needed actions such as close session
-  
+
 function featureFiles() {
 	return glob.sync("test/features/**/*.feature");
 };
@@ -26,13 +26,14 @@ function stepDefs() {
 
 function importStepDef(stepdef) {
 	var fileName = stepdef.replace('.js', '');
+    console.log(fileName);
 	require('../../' + fileName).using(library, context);
 };
 
 function printProperties(someArray) {
 	for (var key in someArray) {
-		if (someArray.hasOwnProperty(key)) { 
-			console.log(' @ '+key + ' -> ' + someArray[key]); 
+		if (someArray.hasOwnProperty(key)) {
+			console.log(' @ '+key + ' -> ' + someArray[key]);
 		}
 	}
 }
@@ -42,7 +43,7 @@ function executeFeature(featureFile) {
 	var feature = featureParser.parse(text);
 	console.log('\nFeature loading: "' + feature.title+'"');
 	printProperties(feature.annotations);
-		
+
 	feature.scenarios.forEach(function(scenario) {
 		console.log(' - ' + scenario.title);
 		steps[scenario.title] = function(browser) {
@@ -58,6 +59,6 @@ function addDefaultSteps() {
 		browser.end();
     };
 }
- 
+
 // Finally export all the steps for nightwatch to execute in sequence
 module.exports = steps;

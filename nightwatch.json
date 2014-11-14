@@ -4,10 +4,10 @@
   
   "selenium" : {
 	"start_process" : false,
-	"server_path" : "/GIT/devops/utils/selenium/selenium-server-standalone-2.42.2.jar",
+    "server_path" : "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-2.40.0.jar",
 	"log_path" : "",
 	"host" : "127.0.0.1",
-	"port" : 4433,
+	"port" : 4444,
 	"cli_args" : {
 	  "webdriver.chrome.driver" : "",
 	  "webdriver.ie.driver" : "",
@@ -18,7 +18,7 @@
     "default" : {
       "launch_url" : "",
       "selenium_host" : "127.0.0.1",
-      "selenium_port" : 8080,
+      "selenium_port" : 4444,
       "silent" : true,
       "disable_colors": false,
       "screenshots" : {
@@ -39,8 +39,7 @@
       "desiredCapabilities" : {
         "browserName" : "phantomjs",
         "javascriptEnabled" : true,
-        "acceptSslCerts" : true,
-        "phantomjs.binary.path" : "/GIT/devops/utils/phantomjs/lib/phantom/phantomjs.exe"
+        "acceptSslCerts" : true
       }
     },
 	"android" : {

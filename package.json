@@ -1,7 +1,10 @@
 {
   "devDependencies": {
+    "glob": "^4.0.6",
     "nightwatch": "^0.5.18",
-    "utils": "^0.1.4",
+    "phantomjs": "^1.9.12",
+    "selenium-server-standalone-jar": "^2.40.0",
+    "utils": "0.0.1",
     "yadda": "^0.10.0"
   }
 }

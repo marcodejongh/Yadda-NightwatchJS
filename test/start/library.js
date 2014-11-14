@@ -1,5 +1,5 @@
 ﻿var Yadda = require('yadda');
-var language = Yadda.localisation.Norwegian;
+var language = Yadda.localisation.English;
 var Dictionary = Yadda.Dictionary;
 
 module.exports.init = function() {
