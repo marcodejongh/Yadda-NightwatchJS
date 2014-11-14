@@ -2,12 +2,8 @@
 
 **INSTALL**
  1. node.js                                        -> http://nodejs.org/download/
- 2. npm install nightwatch --save-dev              -> http://nightwatchjs.org/guide#installation
- 3. INSTALL selenium-server-standalone-2.42.2.jar  -> http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
- 4. INSTALL phantomjs                              -> http://phantomjs.org/download.html
- 5. npm install yadda --save-dev                   -> https://github.com/acuminous/yadda
- 6. npm install utils --save-dev
- 7. npm install glob --save-dev
+ 2. npm install
+ 3. nightwatch nightwatch.json -e #envyouwannuse#
 
 **EDIT SAMPLE TESTS**
 * test/features/test.feature
